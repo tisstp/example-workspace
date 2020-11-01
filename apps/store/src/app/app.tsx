@@ -10,6 +10,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
+import { Header } from '@example-workspace/store/ui-shared';
+
 import './app.scss';
 
 import { getAllGames } from '../fake-api';
@@ -32,6 +34,8 @@ export const App = () => {
   return (
     <>
       <CssBaseline />
+
+      <Header />
 
       <Grid container justify="center" spacing={2} className={classes.root}>
         {getAllGames().map((x) => (
