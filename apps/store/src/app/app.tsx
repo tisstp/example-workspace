@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, useHistory } from 'react-router-dom';
 
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 
 import { Header } from '@example-workspace/store/ui-shared';
 import { formatRating } from '@example-workspace/store/util-formatters';
+import { StoreFeatureGameDetail } from '@example-workspace/store/feature-game-detail';
 
 import './app.scss';
 
@@ -31,6 +33,7 @@ const useStyles = makeStyles({
 
 export const App = () => {
   const classes = useStyles();
+  const history = useHistory();
 
   return (
     <>
@@ -41,7 +44,10 @@ export const App = () => {
       <Grid container justify="center" spacing={2} className={classes.root}>
         {getAllGames().map((x) => (
           <Grid key={x.id} item>
-            <Card className={classes.card}>
+            <Card
+              className={classes.card}
+              onClick={() => history.push(`/game/${x.id}`)}
+            >
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
@@ -72,6 +78,8 @@ export const App = () => {
           </Grid>
         ))}
       </Grid>
+
+      <Route path="/game/:id" component={StoreFeatureGameDetail} />
     </>
   );
 };

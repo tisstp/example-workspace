@@ -21,6 +21,9 @@
       ],
       "@example-workspace/store/util-formatters": [
         "libs/store/util-formatters/src/index.ts"
+      ],
+      "@example-workspace/store/feature-game-detail": [
+        "libs/store/feature-game-detail/src/index.ts"
       ]
     }
   },
