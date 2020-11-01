@@ -6,6 +6,12 @@ This project was generated using [Nx](https://nx.dev).
 
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
 
+## Running App and API
+
+```shell script
+$ nx run store:serveAppAndApi
+```
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
