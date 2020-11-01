@@ -11,6 +11,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 import { Header } from '@example-workspace/store/ui-shared';
+import { formatRating } from '@example-workspace/store/util-formatters';
 
 import './app.scss';
 
@@ -63,7 +64,7 @@ export const App = () => {
                     color="textSecondary"
                     component="p"
                   >
-                    Rating: {x.rating}
+                    <strong>Rating:</strong> {formatRating(x.rating)}
                   </Typography>
                 </CardContent>
               </CardActionArea>

@@ -18,6 +18,9 @@
     "paths": {
       "@example-workspace/store/ui-shared": [
         "libs/store/ui-shared/src/index.ts"
+      ],
+      "@example-workspace/store/util-formatters": [
+        "libs/store/util-formatters/src/index.ts"
       ]
     }
   },
