@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 
 import { formatRating } from '@example-workspace/store/util-formatters';
+import { Game } from '@example-workspace/api/util-interfaces';
 
 import './store-feature-game-detail.scss';
 
@@ -28,7 +29,7 @@ export interface StoreFeatureGameDetailProps
 export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {
   const classes = useStyles();
   const [state, setState] = useState<{
-    data: any;
+    data: Game;
     loadingState: 'success' | 'error' | 'loading';
   }>({
     data: {},

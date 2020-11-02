@@ -1,4 +1,6 @@
-const games = [
+import { Game } from '@example-workspace/api/util-interfaces';
+
+const games: Game[] = [
   {
     id: 'game-1',
     name: 'Game 1',

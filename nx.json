@@ -44,6 +44,9 @@
     },
     "api": {
       "tags": []
+    },
+    "api-util-interfaces": {
+      "tags": []
     }
   }
 }

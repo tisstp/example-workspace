@@ -15,6 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import { Header } from '@example-workspace/store/ui-shared';
 import { formatRating } from '@example-workspace/store/util-formatters';
 import { StoreFeatureGameDetail } from '@example-workspace/store/feature-game-detail';
+import { Game } from '@example-workspace/api/util-interfaces';
 
 import './app.scss';
 
@@ -34,7 +35,7 @@ export const App = () => {
   const classes = useStyles();
   const history = useHistory();
   const [state, setState] = useState<{
-    data: any[];
+    data: Game[];
     loadingState: 'success' | 'error' | 'loading';
   }>({
     data: [],
@@ -63,7 +64,7 @@ export const App = () => {
       });
   }, []);
 
-  const renderCard = ({ id, name, description, image, rating }) => {
+  const renderCard = ({ id, name, description, image, rating }: Game) => {
     return (
       <Grid key={id} item sm={4}>
         <Card
