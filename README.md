@@ -26,6 +26,11 @@ $ nx g @nrwl/react:storybook-configuration store-ui-shared --configureCypress --
 
 # run storybook
 $ nx run store-ui-shared:storybook
+
+# run e2e test
+$ nx run store-ui-shared-e2e:e2e
+$ nx run store-ui-shared-e2e:e2e --watch
+$ nx run store-ui-shared-e2e:e2e --headless
 ```
 
 ## Adding capabilities to your workspace
