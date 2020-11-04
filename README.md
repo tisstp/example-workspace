@@ -12,6 +12,22 @@ This project was generated using [Nx](https://nx.dev).
 $ nx run store:serveAppAndApi
 ```
 
+## Adding storybook
+
+```shell script
+# install storybook
+$ yarn add -D @nrwl/storybook
+
+# check schematics of react
+$ nx list @nrwl/react
+
+# generate configs
+$ nx g @nrwl/react:storybook-configuration store-ui-shared --configureCypress --generateStories --generateCypressSpecs 
+
+# run storybook
+$ nx run store-ui-shared:storybook
+```
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
