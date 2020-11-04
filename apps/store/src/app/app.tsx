@@ -107,7 +107,7 @@ export const App = () => {
     <>
       <CssBaseline />
 
-      <Header />
+      <Header title="Example Workspace" />
 
       <Container>
         <Grid container justify="center" spacing={2} className={classes.root}>
