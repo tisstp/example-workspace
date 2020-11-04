@@ -109,7 +109,7 @@ export const App = () => {
 
       <Header title="Example Workspace" />
 
-      <Container>
+      <Container data-testid="app-container">
         <Grid container justify="center" spacing={2} className={classes.root}>
           {renderContent()}
         </Grid>
