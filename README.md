@@ -12,6 +12,12 @@ This project was generated using [Nx](https://nx.dev).
 $ nx run store:serveAppAndApi
 ```
 
+## Build App
+
+```shell script
+nx build store --configuration=production
+```
+
 ## Adding storybook
 
 ```shell script

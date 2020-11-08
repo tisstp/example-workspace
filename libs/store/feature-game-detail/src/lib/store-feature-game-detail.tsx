@@ -32,7 +32,7 @@ export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {
     data: Game;
     loadingState: 'success' | 'error' | 'loading';
   }>({
-    data: {},
+    data: {} as Game,
     loadingState: 'success',
   });
 
