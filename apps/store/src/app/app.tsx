@@ -3,7 +3,7 @@ import { Route, useHistory } from 'react-router-dom';
 
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid, { GridSpacing } from '@material-ui/core/Grid';
+import Grid from '@material-ui/core/Grid';
 
 import Container from '@material-ui/core/Container';
 import Card from '@material-ui/core/Card';
@@ -43,24 +43,24 @@ export const App = () => {
   });
 
   useEffect(() => {
-    setState({
-      ...state,
+    setState((prevState) => ({
+      ...prevState,
       loadingState: 'loading',
-    });
+    }));
     fetch('api/games')
       .then((x) => x.json())
       .then((res) => {
-        setState({
-          ...state,
+        setState((prevState) => ({
+          ...prevState,
           data: res,
-          loadingState: 'success',
-        });
+          loadingState: 'success'
+        }));
       })
       .catch((err) => {
-        setState({
-          ...state,
+        setState((prevState) => ({
+          ...prevState,
           loadingState: 'error',
-        });
+        }));
       });
   }, []);
 

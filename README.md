@@ -9,13 +9,19 @@ This project was generated using [Nx](https://nx.dev).
 ## Running App and API
 
 ```shell script
-$ nx run store:serveAppAndApi
+nx run store:serveAppAndApi
 ```
 
 ## Build App
 
 ```shell script
 nx build store --configuration=production
+```
+
+## Run Linter
+
+```shell script
+nx run store:lint
 ```
 
 ## Adding storybook
